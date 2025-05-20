@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Clickable Sound Example</title>
+</head>
+<body style="font-family: Arial; padding: 20px;">
+
+  <h1>Class 05</h1>
+
+  <!-- Clickable word that triggers the embed when clicked -->
+  
+  
+<a href="#" onclick="showAudio('Express yourself'); return false;">
+      Express yourself
+    </a>
+  </p>
+
+
+<p>
+    <a href="#" onclick="showAudio('Grammar'); return false;">
+      Grammar
+    </a>
+  </p>
+
+
+<a href="#" onclick="showAudio('Get inspired 1'); return false;">
+      Get inspired 1
+    </a>
+  </p>
+
+<a href="#" onclick="showAudio('Get inspired 2'); return false;">
+      Get inspired 2
+    </a>
+  </p>
+
+
+
+<a href="#" onclick="showAudio('Youre up'); return false;">
+      Youre up
+    </a>
+  </p>
+
+
+
+  <!-- Embed code for SoundCloud (each embed is hidden initially) -->
+  
+  
+<div id="Express yourself" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/b63ce666-bd5a-4c5b-84c5-c48b1e6f0ad6&auto_play=true">
+    </iframe>
+  </div>
+
+<div id="Grammar" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/8299153a-6bc4-478b-aa03-4067365d5535&auto_play=true">
+    </iframe>
+  </div>
+
+<div id="Get inspired 1" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/62ad11bf-5e10-4614-8975-8b09166f798c&auto_play=true">
+    </iframe>
+  </div>
+
+<div id="Get inspired 2" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/8aff3894-1a6c-4bca-9703-9b3d66974102&auto_play=true">
+    </iframe>
+  </div>
+
+
+<div id="Youre up" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/youre-up-1&auto_play=true">
+    </iframe>
+  </div>
+
+  <script>
+    function showAudio(word) {
+      // Hide all audio embeds
+      var allEmbeds = document.getElementsByClassName('audioEmbed');
+      for (var i = 0; i < allEmbeds.length; i++) {
+        allEmbeds[i].style.display = 'none';
+      }
+      
+      // Show the relevant audio embed
+      var audioEmbed = document.getElementById(word);
+      if (audioEmbed) {
+        audioEmbed.style.display = 'block';
+      }
+    }
+  </script>
+
+</body>
+</html>
